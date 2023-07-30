@@ -1,4 +1,4 @@
-var scores =[85,66,95,56]; //scores stored as array 
+var scores =[85,66,95,56]; //scores stored as 
 
 var mygrade, tom, jane, peter, john;
 
@@ -76,4 +76,5 @@ if(scores[4]>=80){
     console.log('John got F');
 }
 
-
+var rifat;
+rifat = 10;
