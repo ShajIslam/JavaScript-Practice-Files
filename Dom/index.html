@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom- Document object model</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    #important-place{
+        color: brown;
+    }
+</style>
+</head>
+<body>
+<h1>Hello Dom!</h1>
+<section>
+    <h1>yes this is dom, how can i help you?</h3>
+
+        <ul>
+            <li>Document object Manipulation</li>
+            <li>Dom is a object of a html file</li>
+            <li>It manipulates with js</li>
+            <li>okay</li>
+        </ul>
+</section>
+<section id="places">
+    <h1>The places I like most</h1>
+<ul>
+    <li class="likes-places">Sitakundo</li>
+    <li class="likes-places" id="important-place">Bandarban</li>
+    <li class="likes-places">shundarban</li>
+</ul>
+</section>
+
+
+<section>
+    <h2 id="title" class="heading3">hello</h2>
+    <ul>
+        <li>hi</li>
+        <li>konicchwa</li>
+        <li>privet</li>
+    </ul>
+</section>
+
+    <script src="dom/dom.js"></script>
+    <script src="dom/jsStyles.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        for(let li of liCollection){
+            console.log(li.innerText);
+        }
+        const allHeadings = document.getElementsByTagName('h1');
+        console.log(allHeadings);//all h1 like array 
+
+        for(let headings of allHeadings){
+            console.log(headings.innerText);
+        }
+
+        let places = document.getElementsByClassName('likes-places')[0];
+        //get element by index because it's like array
+        console.log(places)
+        //getElementsByClassName can access multiple elements
+        // for(let place of places){
+        //     console.log(place.innerText);
+        // }
+        
+
+        let places1 = document.querySelectorAll('.likes-places');
+         //use dot and # notaion for access class and id for query selectior
+        for(let place of places1){
+            console.log(place.innerText);
+        }
+        let pickOne = document.querySelector('#important-place');
+        console.log(pickOne.innerText);
+
+        let otherPlaces = document.getElementById('important-place');
+        //getElementById can access only specific item/element
+        console.log(otherPlaces.innerText);
+
+        //how to get all the class in an element
+        let getTitle = document.getElementById('title');
+        getTitle.getAttribute('class');
+        console.log(getTitle);
+
+
+        
+    </script>
+    
+</body>
+</html>

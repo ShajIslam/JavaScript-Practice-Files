@@ -14,6 +14,7 @@ if(80 <= scores[0] <=99){
 }else if(70 <= scores[1] <=79){
     console.log('julia got :' + 'A-');
 }
+
 // add elemet at the first position an array
 
 scores.unshift(4,0);

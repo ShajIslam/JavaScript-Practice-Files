@@ -76,5 +76,4 @@ if(scores[4]>=80){
     console.log('John got F');
 }
 
-var rifat;
-rifat = 10;
+
