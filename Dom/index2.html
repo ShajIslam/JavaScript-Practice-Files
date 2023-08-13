@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <main>
+    <h1 id="default-text">Default text</h1>
+    <p id="input-text">Input default text</p>
+    <input type="text" name="" id="input-field">
+    <button id="update-button">Update</button>
+    <br>
+    <br>
+    <button onclick="handelOnClick()">Click here to change default text</button>
+    <button id="event-listener">Click here</button>
+ </main>
+    
+
+    <script>
+        function handelOnClick(){
+            const handerStatus = document.getElementById('default-text');
+            handerStatus.innerText = 'Handeled by onclick attribute';
+
+        }
+        //another option
+        document.getElementById('event-listener').addEventListener('click', function(){
+
+            const setText = document.getElementById('default-text');
+            setText.innerText = 'Yeee, It handeled by event listener'
+        });
+
+        document.getElementById('update-button').addEventListener('click', function(){
+            const getText = document.getElementById('input-field');
+            const storeText = getText.value;
+
+            const setDefaultText = document.getElementById('input-text');
+            setDefaultText.innerText = storeText;
+            
+            
+
+
+        })
+
+
+    </script>
+</body>
+</html>

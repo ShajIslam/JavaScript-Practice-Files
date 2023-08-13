@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommentBox</title>
+    <style>
+        #post-button{
+            border: none;
+            padding: 10px 50px;
+            margin-left: 150px;
+            margin-top: 30px;
+            color: white;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 style="color:brown">Welcome to Comment Box</h1>
+        <div id="comment-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste necessitatibus, sed dolore voluptas fuga libero? Quaerat amet quasi aspernatur? Fugit!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus nam voluptas temporibus consectetur architecto ratione.</p>
+        </div>
+        <textarea name="" id="text-area" cols="60" rows="5"></textarea>
+        <br>
+        <button id='post-button'>POST</button>
+    </main>
+    <script>
+        document.getElementById('post-button').addEventListener('click', function(){
+            const commentBox = document.getElementById('text-area');
+            const newComment = commentBox.value;
+
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            
+            commentContainer.appendChild(p);
+            commentBox.value ='';
+
+        })
+    </script>
+</body>
+</html>
